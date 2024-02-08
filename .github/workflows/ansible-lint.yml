@@ -30,18 +30,3 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run ansible-lint
         uses: ansible/ansible-lint@v6
-
-      - uses: actions/checkout@v3
-      - name: Set up Python environment
-        run: |
-          sudo apt-get install python3-pip
-          pip install ansible
-      - name: Validate collection structure
-        run: ansible-galaxy collection lint rekey_variables
-      - name: Build collection archive
-        run: ansible-galaxy collection build rekey_variables
-      - name: Upload archive (optional)
-        uses: actions/upload-artifact@v3
-        with:
-          name: collection_archive
-          path: ./rekey_variables.tar.gz
