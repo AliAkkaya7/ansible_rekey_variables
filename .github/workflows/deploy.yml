@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v3
-        - name: Set up Python environment
-          run: |
-            sudo apt-get install python3-pip
-            pip install ansible
-        - name: Build collection archive
-          run: ansible-galaxy collection build . --force
+#        - name: Set up Python environment
+#          run: |
+#            sudo apt-get install python3-pip
+#            pip install ansible
+#        - name: Build collection archive
+#          run: ansible-galaxy collection build . --force
 #        - name: Upload archive (optional)
 #          uses: actions/upload-artifact@v3
 #          with:
@@ -27,4 +27,3 @@ jobs:
           uses: artis3n/ansible_galaxy_collection@v2.10.1
           with:
             api_key: '${{ secrets.ANSIBLE_GALAXY_TOKEN }}'
-            collection_dir: '/home/runner/work/ansible_rekey_variables/ansible_rekey_variables/infra-ansible_rekey_variables-1.0.0.tar.gz'
