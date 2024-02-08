@@ -21,4 +21,4 @@ jobs:
           uses: actions/upload-artifact@v3
           with:
             name: collection_archive
-            path: ansible_rekey_variables/aliakkaya7-github-1.0.0.tar.gz
+            path: /home/runner/work/ansible_rekey_variables/ansible_rekey_variables/aliakkaya7-github-1.0.0.tar.gz
