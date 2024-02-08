@@ -16,7 +16,7 @@ jobs:
             sudo apt-get install python3-pip
             pip install ansible
         - name: Build collection archive
-          run: ansible-galaxy collection build rekey_variables
+          run: ansible-galaxy collection build .
         - name: Upload archive (optional)
           uses: actions/upload-artifact@v3
           with:
