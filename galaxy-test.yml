@@ -1,0 +1,17 @@
+---
+
+namespace: aliakkaya7
+name: github
+version: 1.0.0
+readme: README.md
+authors:
+  - Arnav, Ali, Bilhan
+description: This collection contains playbooks, roles, modules, and plugins to manage GitHub tasks.
+license_file: LICENSE
+tags:
+  - github
+  - repository
+  - version
+repository: https://github.com/AliAkkaya7/ansible_rekey_variables
+documentation: https://github.com/AliAkkaya7/ansible_rekey_variables
+issues: https://github.com/AliAkkaya7/ansible_rekey_variables/issues
