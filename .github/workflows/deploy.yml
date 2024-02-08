@@ -22,3 +22,8 @@ jobs:
           with:
             name: collection_archive
             path: /home/runner/work/ansible_rekey_variables/ansible_rekey_variables/infra-ansible_rekey_variables-1.0.0.tar.gz
+
+        - name: Deploy Ansible Galaxy Collection
+          uses: artis3n/ansible_galaxy_collection@v2.10.1
+          with:
+            api_key: '${{ secrets.ANSIBLE_GALAXY_TOKEN }}'
