@@ -22,8 +22,16 @@ jobs:
 #          with:
 #            name: collection_archive
 #            path: /home/runner/work/ansible_rekey_variables/ansible_rekey_variables/infra-ansible_rekey_variables-1.0.0.tar.gz
+        - name: Get the version name from the tags
+          run: echo "RELEASE_VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+
+        - name: Injecting a dynamic Collection version
+          uses: artis3n/ansible_galaxy_collection@v2
+          with:
+            api_key: '${{ secrets.GALAXY_API_KEY }}'
+            galaxy_version: '${{ env.RELEASE_VERSION }}'
 
         - name: Deploy Ansible Galaxy Collection
           uses: artis3n/ansible_galaxy_collection@v2.10.1
           with:
-            api_key: '${{ secrets.ANSIBLE_GALAXY_TOKEN }}'
+            api_key: '${{ secrets.GALAXY_API_KEY }}'
