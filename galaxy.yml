@@ -26,7 +26,7 @@ description: A collection to manage vaulted inventories. It helps you to rekey a
 # Either a single license or a list of licenses for content inside of a collection. Ansible Galaxy currently only
 # accepts L(SPDX,https://spdx.org/licenses/) licenses. This key is mutually exclusive with 'license_file'
 license:
-- GNU General Public License v3.0
+- AGPL-3.0-or-later
 
 # A list of tags you want to associate with the collection for indexing/searching. A tag name has the same character
 # requirements as 'namespace' and 'name'
