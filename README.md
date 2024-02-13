@@ -57,7 +57,7 @@ You should install this collection on your local environment.
 
 ````bash
 
-ansible-galaxy collection install vaulted_inventory-vaulted_variable-1.0.0.tar.gz
+ansible-galaxy collection install aliakkaya7.ansible_rekey_variables
 
 ````
 
